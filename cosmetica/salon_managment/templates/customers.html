@@ -1,0 +1,11 @@
+{% block content %}
+    <h2>Lista klientów:</h2>
+    <ul>
+        {% for customer in customers %}
+            <li><a href='{% url "customer" customer.id %}'>{{customer.first_name}} {{customer.last_name}} {{customer.phone}}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+
+/customers/{{ customers_link }}

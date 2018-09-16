@@ -1,0 +1,8 @@
+{% block content %}
+    <h2>Dodawanie Klientów:</h2>
+    <form action='{% url "customer_add" %}' method='post'>
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="dodaj">
+    </form>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% block content %}
+    <h2>Wyszukiwanie klientów:</h2>
+    <form action='{% url "search-customer" %}' method="post">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Szukaj">
+    </form>
+{% endblock %}

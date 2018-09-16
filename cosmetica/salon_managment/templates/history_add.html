@@ -1,0 +1,8 @@
+{% block content %}
+    <h2>Dodaj notatkę</h2>
+    <form action="{% url 'history_add' %}" method='post'>
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="dodaj">
+    </form>
+{% endblock %}
